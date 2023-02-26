@@ -119,17 +119,26 @@ p.founder-name {
 h1.testimonials-h1 {
   color: white;
   -webkit-text-fill-color: white;
+  padding-block: 1em;
 }
 ul.clients {
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 li.client {
-  text-align: center;
+  padding:  1em;
+  display: flex;
+
 }
 img.client-image {
-  width: 20em;
-  border-radius: 2em;
+  width: 10em;
+  border-radius: 1em;
+  display: block;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 section.testimonials {
