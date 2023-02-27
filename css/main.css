@@ -23,11 +23,18 @@ nav {
   transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
 }
+.open-nav {
+  transform: translateX(0%);
+}
+
 ul.nav-items {
   margin-block: auto;
   margin-left: auto;
   padding: 0em;
   margin-top: 8em;
+}
+.nav-item a {
+  padding: 1em;
 }
 li {
   list-style-type: none;
@@ -46,10 +53,13 @@ img.menu {
   height: 3em;
   cursor: pointer;
 }
+
 img.close {
   float: right;
-  margin: 2em;
-  width: 2.5em;
+  width: 4em;
+  height: 3em;
+  margin-right:1.5em ;
+  margin-top:1em;
   cursor: pointer;
 }
 
@@ -60,12 +70,14 @@ section {
   top: 100em;
   left: 0;
   background-size: cover;
+  background-position:50% 50%;;
   background-position: -10em;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
+
 
 section.hero {
   background-image: url(../images/hero-image.jpg);
@@ -93,6 +105,39 @@ h2.hero-subheading {
   font-weight: normal;
 }
 
+button {
+  border: none;
+  border-radius: 100em;
+  margin: 2em 0;
+  padding: 0;
+  background: linear-gradient(90deg, #007CE4 0%, #000000 100%);
+  color: white;
+
+  
+}
+button p {
+  margin: 0;
+  padding: 0.8em 2.4em;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 600;
+}
+button p:hover {
+  background: linear-gradient(90deg, #007CE4 0%, #000000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+}
+button:hover {
+  background: white;
+  transition:  0.5s ease;
+}
+
+/*About us*/
+section.about-us {
+  min-height: auto;
+}
 h1 {
   font-size: 3rem;
   text-align: center;
@@ -109,17 +154,25 @@ img.founder-picture {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 20em;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  height: 15em;
 }
 p.founder-name {
   text-align: center;
   font-weight:bold;
 }
 
+/*previous clients*/
+section.prev-clients {
+  min-height: auto;
+}
 h1.testimonials-h1 {
   color: white;
   -webkit-text-fill-color: white;
   padding-block: 1em;
+  margin: 0;
 }
 ul.clients {
   padding: 0;
@@ -141,6 +194,7 @@ img.client-image {
   margin-bottom: auto;
 }
 
+/*Testimonias*/
 section.testimonials {
   background: url(../images/testimonials-bg.jpg);
   background-position: left -20em top -15em;
@@ -188,6 +242,35 @@ footer ul, a {
   float: right;
 }
 
+/*projects*/
+
+
+
+.h-p {
+  padding-inline: 2em;
+}
+.h-p h2 {
+  text-align: center;
+}
+.h-p p {
+  padding: 0;
+}
+
+section.project {
+  min-height: auto;
+}
+
+section.project img {
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+
+}
+
 @media only screen and (min-width: 680px) {
   header.navbar {
     padding: 1em 15%;
@@ -195,9 +278,20 @@ footer ul, a {
   .hero-contents {
     padding-inline: 15%;
   }
-}
+  
+  p {
+    padding-inline: 15% ;
+  }
+  ul.clients {
+    padding-inline: 15%;
+  }
 
+  
+}
 @media only screen and (min-width: 920px) {
+  section {
+    background-position:50% 50%;
+  }
   header.navbar {
     padding: 0 5%;
     display: flex;
@@ -241,7 +335,63 @@ footer ul, a {
     background-size: cover;
     margin: 0;
     padding: 0;
-    width: 100vw;
+  }
+  h1.hero-heading {
+    font-size: 8rem;
+    line-height: 1em;
+    padding-bottom: 0.2em;
+  }
+  h2.hero-subheading {
+    font-size: 1.5rem;
+  }
+  button {
+    border: none;
+    border-radius: 100em;
+    margin: 5em 0;
+    padding: 0;
+    background: linear-gradient(90deg, #007CE4 0%, #000000 100%);
+    color: white;
+  
+    
+  }
+  button p {
+    margin: 0;
+    padding: 0.8em 2.4em;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+
+  /*Testimonials*/
+  section.testimonials {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:50% 50%;
     height: 100vh;
+
+  }
+  .col a {
+    padding: 0;
+  }
+
+  /*projects*/
+  section.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block: 2em;
+  }
+  section.project-reversed {
+    flex-direction: row-reverse;
+  }
+  
+  section.project img {
+    width: 40em;
+    margin: 0;
+  }
+  .h-p {
+    width: 30em;
+
   }
 }

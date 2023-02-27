@@ -16,9 +16,9 @@
         <nav>
             <img class="close" src="../images/close.svg" alt="">
             <ul class="nav-items">
-                <li class="nav-item"><a href="">Home</a></li>
-                <li class="nav-item"><a href="">Projects</a></li>
-                <li class="nav-item"><a href="">Contact us</a></li>
+                <li class="nav-item"><a href="../html/index.html">Home</a></li>
+                <li class="nav-item"><a href="../html/projects.html">Projects</a></li>
+                <li class="nav-item"><a href="../html/contact-us.html">Contact us</a></li>
             </ul>
         </nav>
         <img class="menu" src="../images/hamburger.svg" alt="">
@@ -28,6 +28,7 @@
         <div class="hero-contents">
             <h1 class="hero-heading">Innovative Solutions <br>for the Digital World</h1>
             <h2 class="hero-subheading">Unlock the Potential of Your Business with Tailored and Innovative Software Solutions, Crafted Specifically to Meet Your Unique Needs.</h2>
+            <button class="btn btn-success" onclick="location.href='../html/contact-us.html';"> <p>Get Started</p></button>
         </div>
     </section>
     <section class="about-us">
@@ -95,5 +96,17 @@
         </ul>
      </div>   
     </footer>
+    <script>
+        const menu = document.querySelector(".menu")
+        const close = document.querySelector(".close")
+        const nav = document.querySelector("nav")
+        menu.addEventListener("click", () => {
+            nav.classList.add("open-nav")
+        })
+
+        close.addEventListener("click", () => {
+            nav.classList.remove("open-nav")
+        })
+    </script>
 </body>
 </html>
